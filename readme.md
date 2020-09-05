@@ -1,8 +1,9 @@
 # Sign-logger
 ### Changelog
+* Added compatibility for custom text color, click [here](#text coloring)
 * Added support for customizing logging configuration (Date and color configuration), and added fail-safe.
 * Added debug() and warn(), Also fixed colors
-### Simple usage:
+### Simple usage
 ```js
 // Import package
 const Logger = require("sign-logger");
@@ -17,7 +18,21 @@ logger.debug("Hmm, Someone needs to check this line of code out!") // [2020-9-2]
 ```js
 new Logger({ dateFormat: "YY-MM-DD", colors: myColorObject })
 ```
-##### Date Format:
+### Text coloring
+##### Default object
+```json
+{
+            "all": false,
+            "error": "\u001b[31;1m",
+            "info": "\u001b[34;1m",
+            "success": "\u001b[32;1m",
+            "debug": "\u001b[35;1m",
+            "warn": "\u001b[33;1m"
+}
+```
+##### textColors#all property
+If you provide a value to the all property, all the logs texts will log with that color </p>
+##### Date Format
 ```
 YY: Year
 MM: Month
@@ -38,7 +53,7 @@ Magenta: \u001b[35;1m
 Cyan: \u001b[36;1m
 White: \u001b[37;1m
 ```
-### Default Date Format:
+### Default Date Format
 ```
 YY-MM-DD
 ```
