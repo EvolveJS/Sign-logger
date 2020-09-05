@@ -1,6 +1,6 @@
 # Sign-logger
 ### Changelog
-* Added compatibility for custom text color, click [here](#text-coloring), and added support for custom symbols, click [here](symbols) for more information.
+* Added compatibility for custom text color, click [here](#text-coloring), and added support for custom symbols, click [here](#symbols) for more information.
 * Added support for customizing logging configuration (Date and color configuration), and added fail-safe.
 * Added debug() and warn(), Also fixed colors
 ### Simple usage
