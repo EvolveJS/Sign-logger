@@ -1,6 +1,6 @@
 # Sign-logger
 ### Changelog
-* Added compatibility for custom text color, click [here](#text coloring)
+* Added compatibility for custom text color, click [here](#text-coloring), and added support for custom symbols, click [here](symbols) for more information.
 * Added support for customizing logging configuration (Date and color configuration), and added fail-safe.
 * Added debug() and warn(), Also fixed colors
 ### Simple usage
@@ -41,6 +41,18 @@ HH: Hour
 MI: Minute
 SS: Second
 MS: Millisecond
+```
+### Symbols
+> Default symbol: [ ]
+##### Setting a new symbol
+```js
+let config = {
+symbols: {
+left: "<",
+right: ">"
+    }
+}
+let logger = new Logger(config)
 ```
 ### Default Colors:
 ```
