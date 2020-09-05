@@ -1,4 +1,4 @@
-module.exports = {
+export const config = {
     Black: "\u001b[30;1m",
     Red: "\u001b[31;1m",
     Green: "\u001b[32;1m",
