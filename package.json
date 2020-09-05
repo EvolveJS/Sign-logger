@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Collbrothers/Sign-logger/issues"
   },
-  "homepage": "https://github.com/Collbrothers/Sign-logger#readme"
+  "homepage": "https://github.com/Collbrothers/Sign-logger#readme",
+  "dependencies": {
+    "@types/node": "^14.6.4"
+  }
 }

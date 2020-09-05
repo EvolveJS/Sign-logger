@@ -1,14 +1,18 @@
-const config = require("./config")
-function base(baseFormat) {
+import { config } from "./config"
+
+function base(baseFormat: string | boolean) {
     const date = new Date()
     if(!baseFormat) return `${config.White}[${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}-${date.getHours()}:${date.getMinutes()}]${config.Reset}`
-    let complete = baseFormat.toUpperCase().replace("MM", date.getMonth().toString())
+    let complete: string = "";
+    if(typeof baseFormat === "string") {
+    complete = baseFormat.toUpperCase().replace("MM", date.getMonth().toString())
         .replace("YY", date.getFullYear().toString())
         .replace("DD", `${date.getDate() + 1}`)
         .replace("HH", date.getHours().toString())
         .replace("MI", date.getMinutes().toString())
         .replace("SS", date.getSeconds().toString())
         .replace("MS", date.getMilliseconds().toString())
+    }
     return `${config.White}[${complete}]${config.Reset}`
 }
 const defaultConfig = {
@@ -33,12 +37,15 @@ const defaultConfig = {
         warn: config.Yellow
     }
 }
- module.exports = class {
+ export class Logger {
+     private format: string | boolean = false;
+     private colors = defaultConfig.colors;
+     private symbols: { left: string; right: string }
+     private textColors: { all: boolean; error: string; info: string; success: boolean; debug: string; warn: string } | { all: boolean; error: string; info: string; success: string; debug: string; warn: string; }
+
     constructor (options = defaultConfig) {
         if(options.dateFormat) this.format = options.dateFormat
-        else this.format = false
         if(options.colors) this.colors = options.colors
-        else this.colors = defaultConfig.colors
         if(options.symbols) this.symbols = options.symbols
         else this.symbols = defaultConfig.symbols
         if(options.textColors) this.textColors = options.textColors
@@ -47,7 +54,7 @@ const defaultConfig = {
     /**
      * @param {string} message The message you want to display
      */
-    error(message) {
+    error(message: string) {
         if(!this.colors.error) throw new Error("Error color is not found")
         if(!this.symbols.left) throw new Error("Left symbol not found")
         if(!this.symbols.right) throw new Error("Right symbol not found")
@@ -56,7 +63,7 @@ const defaultConfig = {
     /**
      * @param {string} message The message you want to display
      */
-    info(message) {
+    info(message: string) {
         if(!this.colors.info) throw new Error("Info color is not found")
         if(!this.symbols.left) throw new Error("Left symbol not found")
         if(!this.symbols.right) throw new Error("Right symbol not found")
@@ -65,7 +72,7 @@ const defaultConfig = {
     /**
      * @param {string} message The message you want to display
      */
-    success(message) {
+    success(message: string) {
         if(!this.colors.success) throw new Error("Success color is not found")
         if(!this.symbols.left) throw new Error("Left symbol not found")
         if(!this.symbols.right) throw new Error("Right symbol not found")
@@ -74,7 +81,7 @@ const defaultConfig = {
     /**
      * @param {string} message The message you want to display
      */
-    debug(message) {
+    debug(message: string) {
         if(!this.colors.debug) throw new Error("Debug color is not found")
         if(!this.symbols.left) throw new Error("Left symbol not found")
         if(!this.symbols.right) throw new Error("Right symbol not found")
@@ -83,7 +90,7 @@ const defaultConfig = {
     /**
      * @param {string} message The message you want to display
      */
-    warn(message) {
+    warn(message: string) {
         if(!this.colors.warn) throw new Error("Warn color is not found")
         if(!this.symbols.left) throw new Error("Left symbol not found")
         if(!this.symbols.right) throw new Error("Right symbol not found")
