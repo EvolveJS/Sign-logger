@@ -7,6 +7,5 @@ export const config = {
     Magenta: "\u001b[35;1m",
     Cyan: "\u001b[36;1m",
     White: "\u001b[37;1m",
-    Reset: "\u001b[0m",
-    Bold: "\033[1m"
+    Reset: "\u001b[0m"
 }

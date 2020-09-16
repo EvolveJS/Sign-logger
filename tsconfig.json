@@ -27,7 +27,8 @@
     "resolveJsonModule": true,
     "noImplicitUseStrict": true,
     "baseUrl": ".",
-    "strict": false
+    "strict": false,
+    "declaration": true
   },
   "exclude": [
     "node_modules"
