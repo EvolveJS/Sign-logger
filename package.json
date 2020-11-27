@@ -1,10 +1,10 @@
 {
   "name": "sign-logger",
-  "version": "1.4.4",
+  "version": "2.0.0",
   "description": "A simple but nice looking logger for 16 bit color consoles!",
-  "main": "dist/index.js",
+  "main": "dist/Logger.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "echo Thank you for installing sign-logger!"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,11 @@
   "keywords": [
     "logger",
     "log",
-    "nice",
-    "log",
-    "console-colors"
+    "console",
+    "terminal",
+    "console-colors",
+    "console log",
+    "terminal log"
   ],
   "author": "Collbrothers",
   "license": "ISC",
@@ -23,7 +25,8 @@
     "url": "https://github.com/Collbrothers/Sign-logger/issues"
   },
   "homepage": "https://github.com/Collbrothers/Sign-logger#readme",
-  "dependencies": {
-    "@types/node": "^14.6.4"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.14.10"
   }
 }

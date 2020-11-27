@@ -3,18 +3,18 @@
     "target": "es6",
     "module": "commonjs",
     "lib": [
-      "dom",
       "es6",
       "es2017",
       "esnext.asynciterable"
     ],
+    "types": ["node"],
     "sourceMap": true,
     "outDir": "./dist",
     "moduleResolution": "node",
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": true,
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -25,9 +25,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "noImplicitUseStrict": true,
     "baseUrl": ".",
-    "strict": false,
+    "strict": true,
     "declaration": true
   },
   "exclude": [
