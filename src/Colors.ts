@@ -2,6 +2,7 @@
  * Contains 8 BIT colors
  */
 export enum Colors  {
+    UNDERLINE = "\u001b[4m",
     BLUE = "\u001b[34;1m",
     BROWN = "\u001b[0;33m",
     RED = "\u001b[31;1m",

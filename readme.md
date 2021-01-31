@@ -12,7 +12,7 @@ The best JS/TS logger out there.
 
 ###### If you used sign logger before, you might not recognize the new style of code being used, this revamp was made due to the [author](#authors) not being happy with the looks and mechanics.
 
-1. Sign logger is split into two classes - Logger and the Transformer! (See the difference [here](#difference))
+1. Sign logger is now split into two classes - Logger and the Transformer! (See the difference [here](#difference))
 2. The logger also comes with internal logs for debugging (optional)
 3. New fail-safe for possible undefined objects/properties
 4. No constructor, instead the logger uses methods to customize the logs

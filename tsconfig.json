@@ -5,7 +5,8 @@
     "lib": [
       "es6",
       "es2017",
-      "esnext.asynciterable"
+      "esnext.asynciterable",
+      "dom"
     ],
     "types": ["node"],
     "sourceMap": true,

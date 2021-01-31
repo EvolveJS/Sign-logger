@@ -1,6 +1,6 @@
 {
   "name": "sign-logger",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "A simple but nice looking logger for 16 bit color consoles!",
   "main": "dist/Logger.js",
   "scripts": {
@@ -25,8 +25,7 @@
     "url": "https://github.com/Collbrothers/Sign-logger/issues"
   },
   "homepage": "https://github.com/Collbrothers/Sign-logger#readme",
-  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.14.10"
+    "@types/node": "^14.14.16"
   }
 }
