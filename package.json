@@ -1,8 +1,8 @@
 {
   "name": "sign-logger",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "A simple but nice looking logger for 16 bit color consoles!",
-  "main": "dist/Logger.js",
+  "main": "dist/index.js",
   "scripts": {
     "install": "echo Thank you for installing sign-logger!"
   },
