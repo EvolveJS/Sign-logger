@@ -1,6 +1,6 @@
 {
   "name": "sign-logger",
-  "version": "2.2.0",
+  "version": "2.2.5",
   "description": "A simple but nice looking logger for 16 bit color consoles!",
   "main": "dist/Logger.js",
   "scripts": {

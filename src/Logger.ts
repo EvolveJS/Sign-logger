@@ -57,7 +57,7 @@ export class Logger {
         this.colors = colors
         return this;
     }
-    public setDate(date: string) {
+    public setDate(date: string): this {
         this.date = date;
         return this;
     }
